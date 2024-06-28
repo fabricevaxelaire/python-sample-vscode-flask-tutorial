@@ -13,11 +13,10 @@ steps:
   displayName: 'Run setup pythona one-line script'
 
 - script: |
-    - script: |
-       python -m venv antenv
-       source antenv/bin/activate
-       python -m pip install --upgrade pip
-       pip install setup
-       pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
-     workingDirectory: $(projectRoot)
-     displayName: "Install requirements"
+     python -m venv antenv
+     source antenv/bin/activate
+     python -m pip install --upgrade pip
+     pip install setup
+     pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
+      workingDirectory: $(projectRoot)
+      displayName: "Install requirements"
