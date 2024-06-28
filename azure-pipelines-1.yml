@@ -2,6 +2,21 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+variables:
+# Azure Resource Manager connection created during pipeline creation
+#  azureServiceConnectionId: '<GUID>'
+
+# Web app name
+  webAppName: 'testsetupiav'
+
+# Environment name
+  environmentName: 'testsetupiav'
+
+# Project root folder.
+  projectRoot: $(System.DefaultWorkingDirectory)
+
+# Python version: 3.11. Change this to match the Python runtime version running on your web app.
+  pythonVersion: '3.11'
 
 trigger:
 - main
