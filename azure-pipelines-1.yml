@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: 'Azure - Private Linux Canada Central lab'
+pool: 'Azure - Private Ubuntu2004 Canada Central Lab'
 
 steps:
 - script: echo Hello, world!
