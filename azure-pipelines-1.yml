@@ -26,10 +26,6 @@ pool: 'Azure - Private Ubuntu2004 Canada Central Lab'
 steps:
 - script: echo Hello, world!
   displayName: 'Run setup pythona one-line script'
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '$(pythonVersion)'
-  displayName: 'Use Python version'
   
 - script: |
      python -m venv antenv
