@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 variables:
 # Azure Resource Manager connection created during pipeline creation
-#  azureServiceConnectionId: '<GUID>'
+  azureServiceConnectionId: 'sp-sc-xfa-lab-01'
 
 # Web app name
   webAppName: 'testsetupiav'
@@ -48,3 +48,14 @@ steps:
 - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
   displayName: 'Upload package'
   artifact: drop
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(pythonVersion)'
+  displayName: 'Use Python version'
+- task: AzureWebApp@1
+  displayName: 'Deploy Azure Web App :  $(webAppName)'
+  inputs:
+    azureSubscription: $(azureServiceConnectionId)
+    appName: $(webAppName)
+    appType: webAppLinux
+    package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
