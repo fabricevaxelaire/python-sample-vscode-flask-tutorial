@@ -55,4 +55,4 @@ steps:
     azureSubscription: $(azureServiceConnectionId)
     appName: $(webAppName)
     appType: webAppLinux
-    package: $(Build.ArtifactStagingDirectory)/drop/$(Build.BuildId).zip
+    package: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
