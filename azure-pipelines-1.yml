@@ -10,7 +10,7 @@ pool: 'Azure - Private Ubuntu2004 Canada Central Lab'
 
 steps:
 - script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  displayName: 'Run setup pythona one-line script'
 
 - script: |
     - script: |
