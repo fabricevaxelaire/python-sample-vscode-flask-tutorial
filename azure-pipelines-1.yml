@@ -6,9 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: vmxfaadolxprd01
-#"Azure - Private Linux Canada Central Dev"
+pool: 'Azure - Private Linux Canada Central lab'
 
 steps:
 - script: echo Hello, world!
