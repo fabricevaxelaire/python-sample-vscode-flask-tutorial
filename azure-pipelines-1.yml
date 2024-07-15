@@ -7,10 +7,10 @@ variables:
   azureServiceConnectionId: 'sp-sc-xfa-lab-01'
 
 # Web app name
-  webAppName: 'testsetupiav'
+  webAppName: 'wa-test-2'
 
 # Environment name
-  environmentName: 'testsetupiav'
+  environmentName: 'wa-test-2'
 
 # Project root folder.
   projectRoot: $(System.DefaultWorkingDirectory)
